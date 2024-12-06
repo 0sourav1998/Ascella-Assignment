@@ -1,0 +1,42 @@
+1.Explain the purpose of useEffect in React.
+
+  -> In React, the useEffect hook is used to perform side effects in function components. Side effects are operations that interact with the  data fetching, DOM manipulation, setting up subscriptions, or timers.
+  -> Perform side effects in functional components: Before React introduced hooks, side effects were only possible in class components via lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount. useEffect brought this capability to function components.
+  -> Handle component lifecycle: useEffect can be used to mimic different lifecycle behaviors like mounting, updating, and unmounting, which were previously handled by componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
+
+2.How do you handle errors in an Express.js route?
+
+  -> try-catch is used to handle any errors that occur during the asynchronous operation someAsyncFunction().
+  -> If an error is thrown inside the route (throw new Error('Something went wrong')), it will be caught by the error-handling middleware.
+  -> Validation checks are performed using express-validator middleware.
+  -> Third-Party libraries like http-errors for handling specific HTTP errors.
+
+3.Describe the role of Redux in a MERN stack application.
+
+  -> Redux is a state management library that provides a central store for all the application's state, making it easier to manage, track, and update the state in an organized manner. It is often used in React applications to manage complex state logic.
+  >> Role of Redux in MERN Stack Application :->
+       -> Redux provides a centralized store where the state of the entire application is managed. In a MERN stack application, this is especially useful for managing data that is shared across multiple components.
+       -> In a MERN stack app, the React frontend communicates with the backend via APIs . Redux can handle asynchronous data fetching and API calls.
+       -> A common use case for Redux in MERN applications is managing authentication (login, signup, token handling, etc.).
+       -> Redux Thunk is middleware used to handle asynchronous actions (like API calls).
+
+4.What are the advantages of using MongoDB over a relational database?
+  -> MongoDB is schema-less, meaning the structure of the data is not enforced.
+     In contrast, relational databases require a predefined schema that is strictly enforced.
+
+  -> MongoDB can handle large volumes of unstructured data more efficiently due to its document-based structure (BSON format)
+     Relational databases traditionally scale vertically (by increasing server capacity) rather than horizontally
+
+  -> MongoDB uses a document-based data model (JSON-like BSON format) to store data.
+     Relational databases use a tabular data model, where data is stored in rows and columns.
+
+5.How can you secure a MERN application? List at least three methods.
+   
+    1.Authentication and Authorization:
+
+      -> Implement JWT (JSON Web Token) for secure authentication and role-based authorization.
+      -> Store the JWT token securely on the client side.
+      -> Using middleware in Express to verify the token on protected routes. 
+
+    2.Hash Passwords and Encrypt Sensitive Data: Always hash passwords using bcrypt and encrypt sensitive data before storing it.
+    3.Protect Against XSS and CSRF: Use libraries for sanitizing input and generating CSRF tokens to prevent common attacks like XSS and CSRF
