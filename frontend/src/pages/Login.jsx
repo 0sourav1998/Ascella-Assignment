@@ -19,7 +19,7 @@ const Login = () => {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/login`,formData);
       if(response && response.data.success){
         localStorage.setItem("token",response.data.token);
-        navigate("/home")
+        navigate("/")
         toast.success(response.data.message)
       }
     } catch (error) {
